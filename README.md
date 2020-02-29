@@ -13,15 +13,25 @@ pip install -i https://test.pypi.org/simple/ foocat_hlw
 ```
 
 ### Features
-- TODO
+- `catbind` combines two categorical variables
 
 ### Dependencies
 
-- TODO
+- python = "^3.7"
+- pandas = "^1.0.1"
 
 ### Usage
 
-- TODO
+Example:
+```
+ >>> from foocat_hlw import foocat_hlw
+ >>> a = pd.Categorical(["character", "hits", "your", "eyeballs"])
+ >>> b = pd.Categorical(["but", "integer", "where it", "counts"])
+ >>> foocat_hlw.catbind(a, b)
+    [character, hits, your, eyeballs, but, integer, where it, counts]
+    Categories (8, object): [but, character, counts,
+    eyeballs, hits, integer, where it, your]
+ ```
 
 ### Documentation
 The official documentation is hosted on Read the Docs: <https://foocat_hlw.readthedocs.io/en/latest/>
